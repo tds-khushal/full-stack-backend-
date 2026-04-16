@@ -19,10 +19,10 @@ app.use('/api',cntrl);
 // http://localhost:8012/api/showall
 // http://localhost:8012/api/deldata/:roll
 
+const dburl = process.env.MONGO_URL;
 
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/curd').then(()=>{
+mongoose.connect(dburl || 'mongodb://127.0.0.1:27017/curd').then(()=>{
     console.log("Connected to database");
     const port = process.env.PORT || 8012;
     app.listen(port,"0.0.0.0",()=>{
