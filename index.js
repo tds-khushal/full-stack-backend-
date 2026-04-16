@@ -25,7 +25,7 @@ app.use('/api',cntrl);
 mongoose.connect('mongodb://127.0.0.1:27017/curd').then(()=>{
     console.log("Connected to database");
     const port = process.env.PORT || 8012;
-    app.listen(port,()=>{
+    app.listen(port,"0.0.0.0",()=>{
         console.log("Server is running on port " + port);
     });
 }).catch((err)=>{
