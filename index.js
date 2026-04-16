@@ -4,7 +4,7 @@ let cntrl =require('./routs/ruts');
 
 let app=express();
 const cors = require('cors');
-app.use(cors({origin: 'https://full-stack-curd.netlify.app/',
+app.use(cors({origin: 'https://full-stack-curd.netlify.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],credentials: true
 }));
 // const cors = require('cors');
