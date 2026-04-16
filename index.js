@@ -7,8 +7,7 @@ app.use(cors({origin: 'https://whimsical-mochi-dad659.netlify.app',
 }));
 let app=express();
 
-const cors = require('cors');
-app.use(cors());
+
 const bodyParser = require('body-parser'); // to parse JSON
 app.use(bodyParser.json());
 
